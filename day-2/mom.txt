@@ -1,0 +1,4 @@
+19 april 2024
+last class - dom intro, selectors, dom tree, classlist, append, append child, prepend, create element using js
+
+- dom listeners, 

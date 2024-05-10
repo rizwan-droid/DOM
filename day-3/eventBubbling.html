@@ -1,0 +1,62 @@
+<!-- - event bubbling means when we trigger any child then its parent gets automatically trigerred. 
+    to prevent such behaviour we need to add some stop propagation
+    'event.stoppropagation' it runs from child to parent.
+
+    -event capturing runs from parent to child. it get captured when we pass true in the event.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            height: 300px;
+            width: 300px;
+            display: flex;
+            background-color: green;
+            justify-content: center;
+            align-items: center;
+        }
+        .child{
+            height: 100px;
+            width: 100px;
+            display: flex;
+            background-color: pink;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent" class="parent">
+        <div id="child" class="child">
+            <button id="btn">clickme</button>
+        </div>
+    </div>
+
+
+    <script>
+        let parent = document.getElementById('parent');
+        let child = document.getElementById('child');
+        let btn = document.getElementById('btn');
+
+        btn.addEventListener('click', function(event){
+            event.stopPropagation();
+            // to stop bubbling
+            console.log('i am button');
+        },true)
+        // true is event capturing
+
+        child.addEventListener('click', function(event){
+            console.log('i am child');
+        }, true)
+
+        parent.addEventListener('click', function(event){
+            console.log('i am parent');
+        }, true)
+    </script>
+</body>
+</html>
+

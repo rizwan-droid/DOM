@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form2">
+        <input type="text" placeholder="firstname" id="fname">
+        <input type="text" placeholder="lastname" id="lname">
+        <input type="number" placeholder="age" id="age">
+        <input type="submit">
+    </form>
+
+    <script>
+        //1. onchange, blur(event with form)
+            let form = document.getElementById('form2');
+            form.addEventListener('submit', function(event){
+                event.preventDefault();
+                console.log('i am form submitted');
+                // console.log(event.target);
+                // for(const value of event.target){
+                //     console.log(value.value);
+                // }
+                // for(const elt of document.forms[0]){
+                //     console.log(elt.value);
+                // }
+
+                // for(const elt of document.forms['form2']){
+                //     console.log(elt.value);
+                // }
+
+                // for(let idx=0;idx<form.length;idx++){
+                //     console.log(form[idx].value);
+                // }
+            })
+            //2. change
+            let form1 = document.getElementById('form2');
+            form.addEventListener('change', function(event){
+                //change event triggered whenever we tab from on input field to another.
+
+                event.preventDefault();
+                console.log('i am form submitted');
+                // console.log(event.target);
+                // for(const value of event.target){
+                //     console.log(value.value);
+                // }
+                // for(const elt of document.forms[0]){
+                //     console.log(elt.value);
+                // }
+
+                // for(const elt of document.forms['form2']){
+                //     console.log(elt.value);
+                // }
+
+                // for(let idx=0;idx<form.length;idx++){
+                //     console.log(form[idx].value);
+                // }
+
+                //3.focus event
+                let form = document.getElementById('form2');
+            form.addEventListener('focus', function(event){
+                //focus event works on input field it picks up previous value. when we click on the filled input field then it focus on that input field
+                event.preventDefault();
+                console.log('i am form submitted');
+                // console.log(event.target);
+                // for(const value of event.target){
+                //     console.log(value.value);
+                // }
+                // for(const elt of document.forms[0]){
+                //     console.log(elt.value);
+                // }
+
+                // for(const elt of document.forms['form2']){
+                //     console.log(elt.value);
+                // }
+
+                // for(let idx=0;idx<form.length;idx++){
+                //     console.log(form[idx].value);
+                // }
+                for(const elt of event.target){
+                    elt.addEventListener('focus', function(event){
+                        console.log(elt.value
+                    );
+                        console.log('i am focus event');
+                    })
+                }
+            })
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" placeholder="firstname">
+    <script>
+        // let input = document.getElementById('input');
+        // input.addEventListener('keypress', function () {
+        //     console.log('i m pressed');
+        //     console.log(event.target.value);
+        //     //target.value gives previous value like if we write 'fff' then it gives 'ff'
+        // })
+
+        // let input = document.getElementById('input');
+        // input.addEventListener('keyup', function () {
+        //     console.log('i m pressed');
+        //     console.log(event.target.value);
+        //     // keyup gives current value and yeh tabtak output nahi dega jabtak ungli utha na lein
+        // })
+
+         let input = document.getElementById('input');
+            input.addEventListener('keydown', function () {
+            console.log('i m pressed');
+            console.log(event.target.value);
+           //target.value gives previous value like if we write 'fff' then it gives 'ff'
+           // keyup gives current value and yeh sath sath output deta h
+         })
+    </script>
+</body>
+</html>

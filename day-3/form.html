@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" placeholder="firstname" id="fname">
+        <input type="text" placeholder="lastname" id="lname">
+        <input type="number" placeholder="age" id="age">
+        <input type="submit">
+    </form>
+
+    <form id="form2">
+        <input type="text" placeholder="firstname" id="fname">
+        <input type="text" placeholder="lastname" id="lname">
+        <input type="number" placeholder="age" id="age">
+        <input type="submit">
+    </form>
+
+
+    <script>
+        // //1.id
+        // let form = document.getElementById('form');
+        // console.log(form);
+        // console.dir(form);
+
+        // //2. each element
+        // let fname = document.getElementById('fname')
+        // let lname = document.getElementById('lname')
+        // let age = document.getElementById('age')
+
+        // // 3.document.form
+        // // console.log(document.forms[0]);
+        // for(const elt of document.forms){
+        //     console.log(elt);
+        // }        
+
+        //4. document.forms[name]
+        // console.log(document.forms['form']);
+        // console.log(document.forms['form2']);
+
+        // for(const elt of document.forms['form2']){
+        //     console.log(elt);
+        // }
+
+        //5. event.target
+        // let form = document.getElementById('form');
+        // form.addEventListener('submit', function (event) {
+        //     //form has a behaviour that when we click on submit  or any button then it reloads the page by default.  to prevent from such behaviour we need to apply a function .
+        //     event.preventDefault();
+        //     // console.log(event.target);
+        //     for(const elt of event.target){
+        //         console.log(elt);
+        //     }
+        // })
+
+        //6. onchange, blur(event with form)
+        
+
+    </script>
+    
+</body>
+</html>
